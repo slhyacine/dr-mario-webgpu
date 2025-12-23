@@ -1,0 +1,1 @@
+{"root":["./vite.config.ts","./src/app.tsx","./src/main.tsx","./src/types.ts","./src/components/gameview.tsx","./src/components/historyview.tsx","./src/components/mainmenu.tsx","./src/engine/drmariogrid.ts","./src/engine/gameengine.ts","./src/engine/inputmanager.ts","./src/engine/webgpurenderer.ts","./src/engine/shaders.ts"],"errors":true,"version":"5.9.3"}
