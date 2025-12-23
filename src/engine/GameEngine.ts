@@ -31,8 +31,8 @@ const COLORS = [
 
 // Rendering constants
 let BOARD_OFFSET_X = 0;
-const BOARD_OFFSET_Y = 100;
-const CELL_SIZE = 36;
+const BOARD_OFFSET_Y = 60;
+const CELL_SIZE = 28;
 
 export class GameEngine {
     canvas: HTMLCanvasElement;
@@ -490,7 +490,7 @@ export class GameEngine {
     }
 
     spawnExplosion(pid: number, c: number, r: number, colorIdx: number) {
-        const offsetX = pid === 0 ? BOARD_OFFSET_X : BOARD_OFFSET_X + 600;
+        const offsetX = pid === 0 ? BOARD_OFFSET_X : BOARD_OFFSET_X + 360;
         const x = offsetX + c * CELL_SIZE + CELL_SIZE / 2;
         const y = BOARD_OFFSET_Y + r * CELL_SIZE + CELL_SIZE / 2;
 
@@ -579,7 +579,7 @@ export class GameEngine {
     draw() {
         const sprites: RenderSprite[] = [];
         BOARD_OFFSET_X = this.canvas.width / 2 - (COLS * CELL_SIZE) / 2;
-        if (this.mode === 'MULTIPLAYER') BOARD_OFFSET_X -= 300;
+        if (this.mode === 'MULTIPLAYER') BOARD_OFFSET_X -= 180;
 
         this.drawGrid(0, sprites);
         if (this.mode === 'MULTIPLAYER') this.drawGrid(1, sprites);
@@ -598,7 +598,7 @@ export class GameEngine {
     }
 
     drawGrid(pid: number, sprites: RenderSprite[]) {
-        const offsetX = pid === 0 ? BOARD_OFFSET_X : BOARD_OFFSET_X + 600;
+        const offsetX = pid === 0 ? BOARD_OFFSET_X : BOARD_OFFSET_X + 360;
         const offsetY = BOARD_OFFSET_Y;
         const grid = this.grids[pid];
 

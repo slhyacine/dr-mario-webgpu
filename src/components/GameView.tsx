@@ -125,8 +125,8 @@ const GameView: React.FC<Props> = ({ mode, onBack, isHost, networkManager, level
                         <div className="flex items-center justify-center bg-black/40 rounded-full p-0.5 border border-slate-800">
                             {state.nextPills && state.nextPills[0] ? (
                                 <div className="flex">
-                                    <div className="w-4 h-4 rounded-l-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c1) }} />
-                                    <div className="w-4 h-4 rounded-r-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c2) }} />
+                                    <div className="w-4 h-4 rounded-l-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c1) }} />
+                                    <div className="w-4 h-4 rounded-r-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c2) }} />
                                 </div>
                             ) : (
                                 <div className="w-8 h-4" />
@@ -159,8 +159,8 @@ const GameView: React.FC<Props> = ({ mode, onBack, isHost, networkManager, level
                         <div className="flex h-7 items-center justify-center bg-black/40 rounded-full p-0.5 border border-slate-900 shadow-inner">
                             {state.nextPills && state.nextPills[0] ? (
                                 <>
-                                    <div className="w-6 h-6 rounded-l-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c1) }} />
-                                    <div className="w-6 h-6 rounded-r-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c2) }} />
+                                    <div className="w-6 h-6 rounded-l-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c1) }} />
+                                    <div className="w-6 h-6 rounded-r-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[0].c2) }} />
                                 </>
                             ) : (
                                 <div className="w-12 h-6 flex items-center justify-center text-[8px] text-slate-600">Loading...</div>
@@ -199,8 +199,8 @@ const GameView: React.FC<Props> = ({ mode, onBack, isHost, networkManager, level
                     <div className="board-container flex justify-center items-center max-w-full">
                         <canvas
                             ref={canvasRef}
-                            width={mode === 'MULTIPLAYER' ? 900 : 450}
-                            height={700}
+                            width={mode === 'MULTIPLAYER' ? 720 : 360}
+                            height={600}
                             className="rounded-sm max-w-full h-auto max-h-[70vh] lg:max-h-[85vh] object-contain"
                         />
                     </div>
@@ -233,8 +233,8 @@ const GameView: React.FC<Props> = ({ mode, onBack, isHost, networkManager, level
                             <div className="flex h-7 items-center justify-center bg-black/40 rounded-full p-0.5 border border-slate-900 shadow-inner">
                                 {state.nextPills && state.nextPills[1] ? (
                                     <>
-                                        <div className="w-6 h-6 rounded-l-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[1].c1) }} />
-                                        <div className="w-6 h-6 rounded-r-full shadow-sm" style={{ background: getMatteGradient(state.nextPills[1].c2) }} />
+                                        <div className="w-6 h-6 rounded-l-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[1].c1) }} />
+                                        <div className="w-6 h-6 rounded-r-md shadow-sm" style={{ background: getMatteGradient(state.nextPills[1].c2) }} />
                                     </>
                                 ) : (
                                     <div className="w-12 h-6 flex items-center justify-center text-[8px] text-slate-600">Loading...</div>
